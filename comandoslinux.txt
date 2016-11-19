@@ -1,0 +1,2 @@
+ls -al
+Inserir usuário do grupo laravel: chown -R eliezer.www-data .

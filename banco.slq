@@ -1,0 +1,36 @@
+﻿CREATE TABLE musicas
+(
+  id_musica SERIAL,
+  titulo VARCHAR(255),
+  id_album INTEGER,
+  id_banda INTEGER,
+  PRIMARY KEY (id_musica),
+  FOREIGN KEY (id_album)
+  REFERENCES albuns(id_album),
+  FOREIGN KEY (id_banda)
+  REFERENCES bandas(id_banda)
+);
+
+insert into bandas ('')
+
+select * from bandas
+
+drop table musicas
+
+CREATE TABLE albuns
+(
+  id_album SERIAL,
+  nome VARCHAR(255),
+  id_banda INTEGER,
+  PRIMARY KEY (id_album),
+  FOREIGN KEY (id_banda)
+  REFERENCES bandas(id_banda)
+);
+
+CREATE TABLE bandas
+(
+  id_banda SERIAL,
+  nome VARCHAR(255),
+  vocalista VARCHAR(255),
+  PRIMARY KEY (id_banda)
+);
